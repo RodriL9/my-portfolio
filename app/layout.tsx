@@ -18,12 +18,12 @@ const dmMono = DM_Mono({
 export const metadata: Metadata = {
   title: "Rodrigo Leites-Mena Portfolio",
   description:
-    "Full Stack Developer specializing in React, Next.js, and Node.js. Building scalable web applications with clean code and thoughtful UX.",
-  keywords: ["Full Stack Developer", "React", "Next.js", "TypeScript", "Node.js", "Rodrigo Leites-Mena"],
+    "CS student & problem solver who loves building things and figuring out how they work.",
+  keywords: ["React", "Next.js", "TypeScript", "Node.js", "Rodrigo Leites-Mena"],
   authors: [{ name: "Rodrigo Leites-Mena" }],
   openGraph: {
     title: "Rodrigo Leites-Mena",
-    description: "Full Stack Developer building scalable web applications.",
+    description: "CS student building scalable web applications.",
     type: "website",
   },
 };

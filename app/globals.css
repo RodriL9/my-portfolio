@@ -135,7 +135,8 @@
         .hero-content {
           position: relative;
           z-index: 2;
-          max-width: 900px;
+          max-width: 100%;
+          width: 100%;
         }
 
         .hero-tag {
@@ -158,24 +159,25 @@
           background: var(--accent2);
         }
 
-        .hero-name {
-          font-size: clamp(3rem, 8vw, 7rem);
+     .hero-name {
+          font-size: clamp(2rem, 9vw, 9rem);
           font-weight: 800;
           line-height: 0.95;
           letter-spacing: -0.02em;
           margin-bottom: 1.5rem;
           opacity: 0;
           animation: fadeUp 0.8s ease forwards 0.4s;
+          white-space: nowrap;
         }
 
-        .hero-name .line1 { display: block; color: var(--text); }
-        .hero-name .line2 {
+       .hero-name .line1 { display: inline; color: var(--text); }
+       .hero-name .line2 {
           display: block;
           background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
-        }
+       }
 
         .hero-desc {
           font-size: 1.1rem;
@@ -297,15 +299,18 @@
           gap: 4rem;
           align-items: start;
         }
+    
 
         .about-photo-wrap {
           position: relative;
         }
+        
 
         .about-photo {
           width: 100%;
-          aspect-ratio: 3/4;
-          max-width: 360px;
+          aspect-ratio: unset;
+          max-width: 700px;
+          height: 500px;
           background: var(--surface);
           border-radius: 8px;
           border: 1px solid var(--border);
@@ -368,6 +373,7 @@
           background: rgba(0,212,255,0.04);
           letter-spacing: 0.05em;
         }
+        
 
         /* PROJECTS */
         #projects { background: var(--bg); }
@@ -534,6 +540,87 @@
         .link-btn-secondary:hover {
           border-color: var(--text);
           color: var(--text);
+        }
+        /* EXPERIENCE */
+        .experience-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s;
+        }
+
+        .experience-card::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3px;
+          height: 100%;
+          background: linear-gradient(to bottom, var(--accent), var(--accent2));
+        }
+
+        .experience-card:hover { border-color: rgba(108,99,255,0.3); }
+
+        .experience-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-bottom: 1.5rem;
+          flex-wrap: wrap;
+          gap: 0.5rem;
+        }
+
+        .experience-title {
+          font-size: 1.25rem;
+          font-weight: 700;
+          color: var(--text);
+          margin-bottom: 0.25rem;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .experience-company {
+          font-family: 'DM Mono', monospace;
+          font-size: 0.8rem;
+          color: var(--accent2);
+          letter-spacing: 0.05em;
+        }
+
+        .experience-date {
+          font-family: 'DM Mono', monospace;
+          font-size: 0.72rem;
+          color: var(--muted);
+          letter-spacing: 0.08em;
+          white-space: nowrap;
+          padding: 0.3rem 0.75rem;
+          border: 1px solid var(--border);
+          border-radius: 3px;
+        }
+
+        .experience-list {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+
+        .experience-list li {
+          font-size: 0.9rem;
+          color: var(--muted);
+          line-height: 1.7;
+          padding-left: 1.25rem;
+          position: relative;
+        }
+
+        .experience-list li::before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: var(--accent);
         }
 
         /* CONTACT */

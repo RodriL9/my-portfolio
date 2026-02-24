@@ -1,5 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
+import ReactMarkdown from 'react-markdown';
 
 interface Message {
   role: "user" | "assistant";
@@ -8,7 +9,6 @@ interface Message {
 
 const SUGGESTIONS = [
   "What projects have you built?",
-  "What's your tech stack?",
   "Are you open to work?",
   "How can I contact you?",
 ];
@@ -442,7 +442,20 @@ export default function AIChatbot() {
                 <div className="msg-avatar">
                   {msg.role === "assistant" ? "RL" : "U"}
                 </div>
-                <div className="msg-bubble">{msg.content}</div>
+       <div className="msg-bubble">
+  <ReactMarkdown
+  components={{
+    strong: ({ children }) => <span>{children}</span>,
+    a: ({ href, children }) => (
+      <a href={href} target="_blank" rel="noopener noreferrer" style={{ color: '#00d4ff', textDecoration: 'underline' }}>
+        {children}
+      </a>
+    ),
+  }}
+>
+  {msg.content}
+</ReactMarkdown>
+</div>
               </div>
             ))}
             {loading && (

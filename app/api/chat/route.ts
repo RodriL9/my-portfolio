@@ -6,8 +6,7 @@ const client = new OpenAI({
 });
 
 // ─── PORTFOLIO CONTEXT ────────────────────────────────────────────────────────
-// Update this object with your real information. The AI uses this as its
-// knowledge base to answer visitor questions accurately.
+// The AI uses this as its knowledge base to answer visitor questions accurately.
 // ─────────────────────────────────────────────────────────────────────────────
 const PORTFOLIO_CONTEXT = {
   name: "Rodrigo Leites-Mena",
@@ -18,48 +17,54 @@ const PORTFOLIO_CONTEXT = {
   github: "github.com/RodriL9",
   availability: "Open to full-time roles and freelance projects",
 
-  about: `
-      Rodrigo is a Computer Science student at Kean University based in Linden, New Jersey...
-  (write your real bio here)
-    [ Add more personal details here — background, education, experience years, etc. ]
-  `,
+ about: `
+  Rodrigo is a junior Computer Science student at Kean University in Union, NJ, maintaining a 3.95 GPA and expected to graduate in December 2027. He has a deep curiosity for how things work — from low-level systems programming all the way up to the applications people use every day.
 
+  He has hands-on experience with C, Python, Java, HTML, CSS, SQL, and tools like Git, Linux, and Microsoft Azure Virtual Machines. He has built projects like a C-based caching simulator that models hardware cache behavior, and implemented a Multi-Level Feedback Queue scheduler inside the xv6 kernel.
+
+  Outside of school, Rodrigo works as a BMW Product Specialist at Open Road BMW in Edison, NJ, where he troubleshoots software and hardware issues, trains customers on BMW technology, and stays current with the latest automotive tech.
+
+  He loves problem solving, thinking through solutions, and figuring out how to bring ideas to life. Outside of tech, he is passionate about sports and staying active. He is always looking for interesting projects to collaborate on and new things to learn.
+`,
   skills: [
     "React", "Next.js", "TypeScript", "JavaScript",
-    "Node.js", "Express", "PostgreSQL", "MongoDB",
-    "Docker", "AWS", "Git", "REST APIs", "Tailwind CSS"
+    "Node.js", "PostgreSQL", "Git", "Tailwind CSS",
+    "HTML/CSS", "C", "Java", "Python", "Linux","Microsoft Azure", "VS Code"
   ],
 
   projects: [
     {
-      title: "Project One",
-      description: "A full-stack web application with real-time features.",
-      tech: ["React", "Node.js", "PostgreSQL"],
-      liveUrl: "https://your-project-1.vercel.app",
-      repoUrl: "https://github.com/yourusername/project-1",
-      details: "[ Add a detailed description of this project ]",
+      title: "Daily To-Do List",
+      description: "A Daily To-Do list application built with React",
+      tech: ["React","JavaScript XML", "HTML", "CSS"],
+      liveUrl: "https://react-to-do-list-lime-omega.vercel.app/",
+      repoUrl: "https://github.com/RodriL9/react_To-Do_list.git",
+      details: "Features a clean UI that enables you to add and delete tasks seamlessly while keeping track of your daily activities.",
     },
     {
-      title: "Project Two",
-      description: "REST API with authentication and cloud deployment.",
-      tech: ["Next.js", "TypeScript", "MongoDB"],
-      liveUrl: "https://your-project-2.vercel.app",
-      repoUrl: "https://github.com/yourusername/project-2",
-      details: "[ Add a detailed description of this project ]",
+      title: "Sum App",
+      description: "SUM app built with python and deployed on Kean University's OBI server",
+      tech: ["Python", "PHP", "SSH" ],
+      liveUrl: "https://obi2.kean.edu/~leitesmr@kean.edu/sum.php",
+      repoUrl: "https://github.com/RodriL9/sum-app.git",
+      details: "SUM app built with python and deployed on Kean University's OBI server.",
     },
     {
-      title: "Project Three",
-      description: "Mobile-first e-commerce platform with payments integration.",
-      tech: ["React Native", "Stripe", "Firebase"],
-      liveUrl: "https://your-project-3.vercel.app",
-      repoUrl: "https://github.com/yourusername/project-3",
-      details: "[ Add a detailed description of this project ]",
+      title: "Chat Application with ChatGPT API",
+      description: "A chat application that integrates with the ChatGPT API to provide intelligent responses.",
+      tech: ["CSS", "JavaScript", "OpenAI API"],
+      liveUrl: "https://rodrigo-leites-r89vz7vdy-rodril9s-projects.vercel.app/",
+      repoUrl: "https://github.com/RodriL9/rodrigoLeites_abc.git",
+      details: "This project demonstrates integration with the OpenAI ChatGPT API to generate intelligent responses in a chat interface.",
+
     },
   ],
 
-  hobbies: "[ Add your hobbies here — gaming, hiking, music, etc. ]",
+  hobbies: "[ Playing sports like soccer, basketball, and tennis. Learning new things and challenging myself. ]",
 
-  resume: "Available for download at /resume.pdf",
+ easterEggs: "[ Favorite animes are Vinland Saga, Attack on Titan, Jujutsu Kaisen, and My Hero Academia. Gojo is stronger than Ryomen Sukuna.]",
+
+  resume: `Visitors can download Rodrigo's resume here: [Download Resume](${process.env.NEXT_PUBLIC_SITE_URL}/RodrigoResume.pdf)`,
 };
 
 const SYSTEM_PROMPT = `
@@ -85,6 +90,7 @@ ${PORTFOLIO_CONTEXT.skills.join(", ")}
 
 HOBBIES / INTERESTS:
 ${PORTFOLIO_CONTEXT.hobbies}
+${PORTFOLIO_CONTEXT.easterEggs}
 
 PROJECTS:
 ${PORTFOLIO_CONTEXT.projects
