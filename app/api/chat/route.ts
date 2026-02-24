@@ -46,7 +46,7 @@ const PORTFOLIO_CONTEXT = {
       description: "SUM app built with python and deployed on Kean University's OBI server",
       tech: ["Python", "PHP", "SSH" ],
       liveUrl: "https://obi2.kean.edu/~leitesmr@kean.edu/sum.php",
-      repoUrl: "https://github.com/RodriL9/sum-app.git",
+      repoUrl: "https://github.com/RodriL9/sum-calculator.git",
       details: "SUM app built with python and deployed on Kean University's OBI server.",
     },
     {
