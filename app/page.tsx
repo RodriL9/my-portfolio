@@ -40,8 +40,11 @@ export default function Home() {
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [activeProject, setActiveProject] = useState(0);
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
-const [sending, setSending] = useState(false);
-const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const [menuOpen, setMenuOpen] = useState(false);// change 1 
+
   const heroRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -85,23 +88,46 @@ const [sent, setSent] = useState(false);
       )}
 
       {/* NAV */}
+      
       <nav>
-        <div className="nav-logo">
-          RL<span>-</span>M
-        </div>
-        <ul className="nav-links">
-          {NAV_ITEMS.map((item) => (
-            <li key={item}>
-              <button
-                onClick={() => scrollTo(item.toLowerCase())}
-                className={activeSection === item ? "active" : ""}
-              >
-                {item}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
+  <div className="nav-logo">
+    RL<span>-</span>M
+  </div>
+  <ul className="nav-links">
+    {NAV_ITEMS.map((item) => (
+      <li key={item}>
+        <button
+          onClick={() => scrollTo(item.toLowerCase())}
+          className={activeSection === item ? "active" : ""}
+        >
+          {item}
+        </button>
+      </li>
+    ))}
+  </ul>
+  <button
+    className={`burger ${menuOpen ? "open" : ""}`}
+    onClick={() => setMenuOpen((o) => !o)}
+    aria-label="Toggle menu"
+  >
+    <span className="burger-line" />
+    <span className="burger-line" />
+    <span className="burger-line" />
+  </button>
+</nav>
+
+<div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
+  <button className="burger open" onClick={() => setMenuOpen(false)}>
+    <span className="burger-line" />
+    <span className="burger-line" />
+    <span className="burger-line" />
+  </button>
+  {NAV_ITEMS.map((item) => (
+    <button key={item} onClick={() => { scrollTo(item.toLowerCase()); setMenuOpen(false); }}>
+      {item}
+    </button>
+  ))}
+</div>
 
       {/* HERO */}
       <section id="hero" style={{ padding: 0 }}>
