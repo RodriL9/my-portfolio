@@ -988,13 +988,13 @@
           .skills-grid { grid-template-columns: repeat(2, 1fr); }
           footer { flex-direction: column; gap: 1rem; text-align: center; }
 
-       .about-photo {
-    height: auto;        /* remove the fixed 500px height */
+  .about-photo {
+    height: 250px;      /* smaller than 500px */
   }
 
   .about-photo img {
     width: 100%;
-    height: auto;        /* let image scale naturally */
-    object-fit: contain; /* no cropping */
+    height: 100%;
+    object-fit: cover;  /* keeps same visual style */
   }
         }
