@@ -18,4 +18,4 @@ Add a `.env.local` file with your `OPENAI_API_KEY` and `RESEND_API_KEY`.
 ## Author
 
 **Rodrigo Leites-Mena** — CS Student at Kean University  
-[GitHub](https://github.com/RodriL9) · [LinkedIn](https://www.linkedin.com/in/rodrigo-leites-mena-3a53aa348/)
+· [LinkedIn](https://www.linkedin.com/in/rodrigo-leites-mena-3a53aa348/)
