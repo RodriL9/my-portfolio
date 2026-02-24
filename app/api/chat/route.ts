@@ -64,7 +64,7 @@ const PORTFOLIO_CONTEXT = {
 
  easterEggs: "[ Favorite animes are Vinland Saga, Attack on Titan, Jujutsu Kaisen, and My Hero Academia. Gojo is stronger than Ryomen Sukuna.]",
 
-  resume: `Visitors can download Rodrigo's resume here: [Download Resume](${process.env.NEXT_PUBLIC_SITE_URL}/RodrigoResume.pdf)`,
+  resume: `Visitors can download Rodrigo's resume here: [Download Resume](https://my-portfolio-six-ebon-64.vercel.app/RodrigoResume.pdf)`,
 };
 
 const SYSTEM_PROMPT = `
