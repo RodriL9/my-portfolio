@@ -400,14 +400,15 @@ export default function Home() {
           </p>
           <a
             href="/RodrigoResume.pdf"
-            download="Rodrigo_Leites-Mena_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             style={{ display: "inline-flex", margin: "0 auto", textDecoration: "none" }}
           >
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M7 2v8M4 7l3 3 3-3M2 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span>Download PDF</span>
+            <span>View/Download Resume</span>
           </a>
         </div> 
       </section>
