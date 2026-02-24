@@ -39,6 +39,7 @@ const PORTFOLIO_CONTEXT = {
       tech: ["React","JavaScript XML", "HTML", "CSS"],
       liveUrl: "https://react-to-do-list-lime-omega.vercel.app/",
       repoUrl: "https://github.com/RodriL9/react_To-Do_list.git",
+      videoUrl: "https://www.youtube.com/watch?v=mXCR885e828",
       details: "Features a clean UI that enables you to add and delete tasks seamlessly while keeping track of your daily activities.",
     },
     {
@@ -47,6 +48,7 @@ const PORTFOLIO_CONTEXT = {
       tech: ["Python", "PHP", "SSH" ],
       liveUrl: "https://obi2.kean.edu/~leitesmr@kean.edu/sum.php",
       repoUrl: "https://github.com/RodriL9/sum-calculator.git",
+      videoUrl: "https://www.youtube.com/watch?v=CY8whTlSRIw",
       details: "SUM app built with python and deployed on Kean University's OBI server.",
     },
     {
@@ -55,6 +57,7 @@ const PORTFOLIO_CONTEXT = {
       tech: ["CSS", "JavaScript", "OpenAI API"],
       liveUrl: "https://rodrigo-leites-abc.vercel.app/",
       repoUrl: "https://github.com/RodriL9/rodrigoLeites_abc.git",
+      videoUrl: "https://www.youtube.com/watch?v=jkPqODpFD4c",
       details: "This project demonstrates integration with the OpenAI ChatGPT API to generate intelligent responses in a chat interface.",
 
     },
@@ -100,6 +103,7 @@ ${PORTFOLIO_CONTEXT.projects
     Tech used: ${p.tech.join(", ")}
     Live: ${p.liveUrl}
     Code: ${p.repoUrl}
+    Video: ${p.videoUrl}
     Details: ${p.details}
 `
   )
