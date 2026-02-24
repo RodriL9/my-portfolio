@@ -29,7 +29,7 @@ const PROJECTS = [
     description: "A chat application that integrates with the ChatGPT API to provide intelligent responses.",
     tech: ["CSS", "JavaScript", "OpenAI API"],
     videoUrl: "https://www.youtube.com/embed/jkPqODpFD4c?si=T0e_Hs4erQYFlOgW",
-    liveUrl: "https://rodrigo-leites-r89vz7vdy-rodril9s-projects.vercel.app/",
+    liveUrl: "https://rodrigo-leites-abc.vercel.app/",
     repoUrl: "https://github.com/RodriL9/rodrigoLeites_abc.git",
   },
 ];

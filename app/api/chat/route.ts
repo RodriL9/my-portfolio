@@ -53,7 +53,7 @@ const PORTFOLIO_CONTEXT = {
       title: "Chat Application with ChatGPT API",
       description: "A chat application that integrates with the ChatGPT API to provide intelligent responses.",
       tech: ["CSS", "JavaScript", "OpenAI API"],
-      liveUrl: "https://rodrigo-leites-r89vz7vdy-rodril9s-projects.vercel.app/",
+      liveUrl: "https://rodrigo-leites-abc.vercel.app/",
       repoUrl: "https://github.com/RodriL9/rodrigoLeites_abc.git",
       details: "This project demonstrates integration with the OpenAI ChatGPT API to generate intelligent responses in a chat interface.",
 
